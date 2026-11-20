@@ -1,0 +1,155 @@
+{
+  "device": "mps",
+  "torch_version": "2.15.0",
+  "config": {
+    "device": "mps",
+    "resolution": 8,
+    "steps": 120,
+    "train_folds": 12,
+    "validation_folds": 4,
+    "test_folds": 8,
+    "teacher_substeps": 4,
+    "teacher_iterations": 12,
+    "spring_substeps": 8,
+    "updates": 200,
+    "validate_every": 25,
+    "horizon": 5,
+    "threads": 2,
+    "seed": 7
+  },
+  "teacher_seconds": 2.76363316700008,
+  "calibration_seconds": 0.95281587500358,
+  "residual_seconds": 7.72240416600107,
+  "physics": {
+    "stiffness_scale": 1.0,
+    "friction": 0.55,
+    "substeps": 8
+  },
+  "calibration": [
+    {
+      "physics": {
+        "stiffness_scale": 0.8,
+        "friction": 0.25,
+        "substeps": 8
+      },
+      "train_rmse_mm": 5.05369234085083
+    },
+    {
+      "physics": {
+        "stiffness_scale": 0.8,
+        "friction": 0.4,
+        "substeps": 8
+      },
+      "train_rmse_mm": 4.42508602142334
+    },
+    {
+      "physics": {
+        "stiffness_scale": 0.8,
+        "friction": 0.55,
+        "substeps": 8
+      },
+      "train_rmse_mm": 5.01063346862793
+    },
+    {
+      "physics": {
+        "stiffness_scale": 1.0,
+        "friction": 0.25,
+        "substeps": 8
+      },
+      "train_rmse_mm": 2.926302194595337
+    },
+    {
+      "physics": {
+        "stiffness_scale": 1.0,
+        "friction": 0.4,
+        "substeps": 8
+      },
+      "train_rmse_mm": 2.0029280185699463
+    },
+    {
+      "physics": {
+        "stiffness_scale": 1.0,
+        "friction": 0.55,
+        "substeps": 8
+      },
+      "train_rmse_mm": 1.957075595855713
+    },
+    {
+      "physics": {
+        "stiffness_scale": 1.25,
+        "friction": 0.25,
+        "substeps": 8
+      },
+      "train_rmse_mm": 5.256782054901123
+    },
+    {
+      "physics": {
+        "stiffness_scale": 1.25,
+        "friction": 0.4,
+        "substeps": 8
+      },
+      "train_rmse_mm": 5.0628156661987305
+    },
+    {
+      "physics": {
+        "stiffness_scale": 1.25,
+        "friction": 0.55,
+        "substeps": 8
+      },
+      "train_rmse_mm": 4.928070068359375
+    }
+  ],
+  "best_update": 125,
+  "validation": [
+    {
+      "update": 0,
+      "validation_rmse_mm": 2.2093191146850586
+    },
+    {
+      "update": 25,
+      "validation_rmse_mm": 2.5263051986694336
+    },
+    {
+      "update": 50,
+      "validation_rmse_mm": 2.438678741455078
+    },
+    {
+      "update": 75,
+      "validation_rmse_mm": 2.0846240520477295
+    },
+    {
+      "update": 100,
+      "validation_rmse_mm": 1.9869930744171143
+    },
+    {
+      "update": 125,
+      "validation_rmse_mm": 1.6782881021499634
+    },
+    {
+      "update": 150,
+      "validation_rmse_mm": 1.7221136093139648
+    },
+    {
+      "update": 175,
+      "validation_rmse_mm": 1.8058626651763916
+    },
+    {
+      "update": 200,
+      "validation_rmse_mm": 1.9193556308746338
+    }
+  ],
+  "test": {
+    "spring": {
+      "final_fold_alignment_mm": 29.27368927001953,
+      "p95_edge_stretch_pct": 1.8290921580046595,
+      "rollout_rmse_mm": 1.9640112405388157,
+      "final_rmse_mm": 3.012571096420288
+    },
+    "pgrd": {
+      "final_fold_alignment_mm": 29.198274612426758,
+      "p95_edge_stretch_pct": 1.7761988099664006,
+      "rollout_rmse_mm": 1.7619558394812695,
+      "final_rmse_mm": 3.36836314201355
+    }
+  }
+}
